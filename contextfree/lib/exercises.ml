@@ -16,7 +16,18 @@ let todo : grammar =
 
 
 (* #### Exercise 1, easy (zero_n_one_n) *)
-let zero_n_one_n : grammar = todo
+let zero_n_one_n : grammar = 
+  {
+    symbols = [ S ];
+    terminals = [ '0'; '1' ];
+    productions =
+      [
+        S --> "0S0";
+        S --> "1S1";
+        S --> "";
+      ];
+    start = S;
+  }
 
 
 (* #### Exercise 2, easy (palindromes) *)

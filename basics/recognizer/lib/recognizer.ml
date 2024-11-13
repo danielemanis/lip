@@ -1,3 +1,11 @@
+let rec langl (w : char list) : bool = match w with
+| [] -> false
+| ['0'] -> true
+| ['1'] -> true
+| '0'::ls -> langl ls
+| '1' :: ls -> langl ls
+| _ -> false;;
+
 let lang1 _ = failwith ""
 
 let lang2 _ = failwith ""
